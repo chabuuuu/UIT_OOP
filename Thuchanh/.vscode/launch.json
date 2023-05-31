@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Workspace/UIT/oop/Thuchanh",
-      "program": "d:/Workspace/UIT/oop/Thuchanh/build/Debug/outDebug",
+      "cwd": "d:/Workspace/UIT/UIT_OOP/Thuchanh",
+      "program": "d:/Workspace/UIT/UIT_OOP/Thuchanh/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
