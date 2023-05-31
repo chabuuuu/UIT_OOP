@@ -233,23 +233,21 @@ public:
         }
     }
 
-    double tinhTongThuNhap() const {
+    void tinhTongThuNhap() const {
         double tongThuNhap = 0;
         for (const auto& hoaDon : danhSachHoaDon) {
             tongThuNhap += hoaDon->tinhTongGiaTri();
         }
-        return tongThuNhap;
+        cout << "Tong thu nhap cua cua hang " << tongThuNhap << endl;
     }
 
    void xuatKhachHangMuaNhieuNhat() {
-    // Tạo một map để theo dõi tổng giá trị các hóa đơn của mỗi khách hàng
-    // map<KhachHang*, double> tongGiaTriHoaDon;
+
     map<string, double> tongGiaTriHoaDon;
 
-    // Duyệt qua danh sách hóa đơn và tính tổng giá trị các hóa đơn cho từng khách hàng
  
     for (const auto& hoaDon : danhSachHoaDon) {
-        // KhachHang* khachHang = hoaDon->layKhachHang();
+    
         string khachHang = hoaDon->layMaSoKhachHang();
         double tongGiaTri = hoaDon->tinhTongGiaTri();
      
@@ -262,7 +260,7 @@ public:
     
 
     // Tìm khách hàng có tổng giá trị hóa đơn lớn nhất
-    // KhachHang* khachHangMuaNhieuNhat = nullptr;
+    
     string khachHangMuaNhieuNhat ;
     double maxTongGiaTri = 0;
     for (const auto& pair : tongGiaTriHoaDon) {
@@ -272,44 +270,29 @@ public:
         }
     }
 
-    // Xuất thông tin khách hàng mua nhiều nhất (nếu có)
-    // if (khachHangMuaNhieuNhat != "") {
-        // cout << "Khach hang mua nhieu nhat " << khachHangMuaNhieuNhat->layTenKhachHang() << endl;
-        // cout << "Khach hang mua nhieu nhat " << khachHangMuaNhieuNhat << endl;
+    // Xuất thông tin khách hàng mua nhiều nhất 
+  
+      
         for (const auto& hoaDon : danhSachHoaDon) {
-        // KhachHang* khachHang = hoaDon->layKhachHang();
+        
         if (khachHangMuaNhieuNhat == hoaDon->layMaSoKhachHang()){
             KhachHang* khachHangMuaNhieu = hoaDon->layKhachHang();
+            cout<<"Khach hang mua nhieu nhat: \n";
             khachHangMuaNhieu->xuat();
             break;
         }
         }
    
         cout << "Tong gia tri hoa don " << maxTongGiaTri << endl;
-    // } 
-    // else {
-    //     cout << "Khong co khach hang nao" << endl;
-    // }
 }
 
 };
 
 int main() {
     QuanLyHoaDon quanLy;
-
-    // Nhập danh sách hoá đơn
     quanLy.nhapDanhSachHoaDon();
-
-    // Hiển thị danh sách hoá đơn
     quanLy.hienThiDanhSachHoaDon();
-
-    // Tính tổng thu nhập
-    double tongThuNhap = quanLy.tinhTongThuNhap();
-    cout << "Tong thu nhap cua cua hang " << tongThuNhap << endl;
+    quanLy.tinhTongThuNhap();
     quanLy.xuatKhachHangMuaNhieuNhat();
-  
-
-   
-
     return 0;
 }
