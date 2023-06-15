@@ -1,4 +1,2 @@
-   // float calculateDamage(float wearDown) {
-    //     float damage = baseDamage *  wearDown;
-    //     return damage;
-    // }
+      // cout<<i<<endl;
+                // cout<<listClothes[i]->addBuff(giaTriTruMu);
