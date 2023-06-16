@@ -3,7 +3,8 @@
 using namespace std;
 
 class Base{
-
+protected:
+	int a;
 public:
 	virtual void xuat(int x = 0){
 		cout<<"base";
