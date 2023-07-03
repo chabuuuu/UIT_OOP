@@ -1,2 +1,4 @@
-      // cout<<i<<endl;
-                // cout<<listClothes[i]->addBuff(giaTriTruMu);
+Con(){
+//     a = 1;
+//     b = 1;
+// }
